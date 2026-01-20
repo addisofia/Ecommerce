@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{%block content %}
+<main> 
+    <section class="py-3 text-center container"> 
+        <div class="row py-lg-3"> 
+            <div class="col-lg-6 col-md-8 mx-auto"> 
+            <h1 class="titre-marocain">Nos Couscous faits maison</h1> 
+            <p class="text-center lead fw-bold my-3" style="color: #C05A3E;">Choisissez votre Couscous préféré et commandez-le dès maintenant à emporter <img src="{% static 'images/delivery.jpg' %}" alt="Livraison" width="60"></p>
+            </div> 
+        </div> 
+    </section> 
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container"> 
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col"> 
+                    <div class="card shadow-sm">
+                     <img class="card-img-top" src="{% static 'images/couscous.jpg' %}" alt="Tajine Viande" />
+                        <div class="card-body"> 
+                            <p class="card-text fw-bold">Couscous vegetarian</p> 
+                            <div class="d-flex justify-content-between align-items-center "> 
+                                <span class="fw-bold text-warning ms-2">€10.00</span> 
+                                <button type="button" class="btn btn-sm btn-warning ms-5">Ajouter au panier</button> 
+                                 
+                            </div> 
+                        </div>      
+                                            
+                    </div> 
+                </div> 
+                <div class="col"> 
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="{% static 'images/viande-couscous.jpg' %}" alt="Tajine Viande" />
+                            <div class="card-body"> 
+                                <p class="card-text fw-bold">Couscous viande</p> 
+                                <div class="d-flex justify-content-between align-items-center"> 
+                                    <span class="fw-bold text-warning ms-2">€15.00</span>
+                                    <button type="button" class="btn btn-sm btn-warning">Ajouter au panier</button>
+                                    
+                                </div> 
+                            </div> 
+                    </div> 
+                </div> 
+                    <div class="col"> 
+                        <div class="card shadow-sm">
+                            <img class="card-img-top" src="{% static 'images/couscous-poulet.jpg' %}" alt="Tajine Poulet" /> 
+                                <div class="card-body"> 
+                                <p class="card-text fw-bold">Couscous poulet</p>
+                                     <div class="d-flex justify-content-between align-items-center">  
+                                        <span class="fw-bold text-warning ms-2">€12.00</span>
+                                        <button type="button" class="btn btn-sm btn-warning">Ajouter au panier</button> 
+                                    </div> 
+                                </div> 
+                        </div> 
+                    </div> 
+                                                            
+</main> 
+                                                                                             
+                                                                                        
+
+
+{% endblock %}

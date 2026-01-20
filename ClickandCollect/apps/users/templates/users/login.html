@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{%block content %}
+<div class="col-md-4 mx-auto mt-5">
+    <!-- Titres cliquables -->
+    <div class="text-center mb-4">
+        <h1 id="title-login" class="h4 fw-normal text-dark clickable " onclick="showLogin()">Se connecter</h1>
+        <h1 id="title-register" class="h4 fw-normal text-dark clickable mb-5" onclick="showRegister()">Créer un compte</h1>
+    </div>
+    
+    <div class="card shadow p-4 mb-5">
+       <!-- Formulaire Connexion -->
+        <form id="login-form">
+             {% csrf_token %}
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" placeholder="Adresse email">
+                <label>Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+                <label>Mot de passe</label>
+                <a href="#" class="forgot-link position-absolute end-0 top-50 translate-middle-y me-3">Oublié ?</a>
+                                               
+            </div>
+            <div class="form-check text-start my-3">
+                    <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault" name="remember_me">
+                    <label class="form-check-label" for="checkDefault">se souvenir de moi </label>
+            </div>
+            <button class="btn btn-success w-100">Se connecter</button>
+        </form>
+
+        <!-- Formulaire Création compte -->
+        <form id="register-form" method="POST" action="{% url 'signup' %}" style="display:none;">
+             {% csrf_token %}
+            <div class="form-floating mb-3">
+                <input type="text"  name="username" class="form-control" placeholder="Nom d'utilisateur">
+                <label>Nom d'utilisateur</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Email">
+                <label>Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                <label>Mot de passe</label>
+            </div>
+            <button class="btn btn-success w-100">Créer</button>
+        </form>
+        
+
+    </div>
+</div>
+<div style="height: 100px;"></div>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}

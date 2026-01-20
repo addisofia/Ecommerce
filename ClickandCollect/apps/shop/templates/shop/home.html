@@ -1,0 +1,131 @@
+ {% extends "base.html" %}
+ {% load static %}
+ {% include "head.html" %}
+
+
+
+ {% block content %} 
+  <!-- Product section-->
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="card shadow-lg border-0">
+      <div class="row g-0 align-items-center">
+
+        <!-- Image -->
+        <div class="col-md-6">
+          <img src="{% static 'images/couscous.jpg' %}" class="img-fluid rounded-start" alt="Couscous marocain">
+        </div>
+
+        <!-- Contenu texte -->
+        <div class="col-md-6">
+          <div class="card-body">
+            <h1 class="card-title display-6 fw-bolder">Votre Couscous </h1>
+            <h4 class="badge bg-warning text-dark mb-3">En promotion</h4>
+
+            <div class="fs-5 mb-3">
+              <span class="text-decoration-line-through">15.00 €</span>
+              <span class="fw-bold text-warning ms-2">10.00 €</span>
+            </div>
+
+            <p class="card-text lead text-muted">
+              Découvrez le <strong>véritable couscous marocain</strong>, un plat généreux et savoureux,
+              préparé selon la tradition avec des semoules fines, légumes frais et épices parfumées 🌿.<br>
+              <strong>Commandez</strong> facilement en quelques clics, récupérez votre commande et régalez-vous!.<br>
+              <strong>Plusieurs variantes disponibles dès 10 € !</strong>
+            </p>
+            <div class="d-flex">
+              <a href="{% url 'shop:menu' %}" class="btn btn-warning btn-md flex-shrink-0">
+                <i class="bi-cart-fill me-4"></i>Commander maintenant
+              </a>
+            </div>
+          </div> <!-- /card-body -->
+        </div> <!-- /col-md-6 -->
+      </div> <!-- /row -->
+    </div> <!-- /card -->
+  </div> <!-- /container -->
+</section>
+
+<!-- Related items section -->
+<section class="py-5 bg-light">
+  <div class="container px-4 px-lg-5 mt-5">
+    <h2 class="fw-bolder mb-4 text-center">Vous pourriez aimer</h2>
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+      <!-- Produit 1 -->
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/Tajine-Viande.jpg' %}" alt="Tajine Viande" />
+          <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Tajine Viande</h5>
+            <p class="fw-bold text-warning fs-5">€15.00</p>
+          </div>
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-warning w-100" href="#">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produit 2 -->
+      <div class="col mb-5">
+        <div class="card h-100 position-relative">
+          <div class="badge bg-warning text-dark position-absolute" style="top:0.5rem; right:0.5rem">Promo</div>
+          <img class="card-img-top" src="{% static 'images/Tajine-Poulet.jpg' %}" alt="Tajine Poulet" />
+          <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Tajine Poulet</h5>
+            <p>
+              <span class="text-muted text-decoration-line-through">€15.00</span>
+              <span class="fw-bold text-warning ms-2">€10.00</span>
+            </p>
+          </div>
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-warning w-100" href="#">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produit 3 -->
+      <div class="col mb-5">
+        <div class="card h-100 position-relative">
+          <div class="badge bg-warning text-dark position-absolute" style="top:0.5rem; right:0.5rem">Promo</div>
+          <img class="card-img-top" src="{% static 'images/harira.jpg' %}" alt="Harira" />
+          <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Soupe "Harira"</h5>
+            <p>
+              <span class="text-muted text-decoration-line-through">€9.00</span>
+              <span class="fw-bold text-warning ms-2">€7.00</span>
+            </p>
+          </div>
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-warning w-100" href="#">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produit 4 -->
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/Msemen.jpg' %}" alt="Msemen" />
+          <div class="card-body p-4 text-center">
+            <h5 class="fw-bolder">Msemen</h5>
+            <p class="fw-bold text-warning fs-5">€7.00</p>
+          </div>
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-warning w-100" href="#">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+ {% endblock %}
+
